@@ -1,0 +1,121 @@
+// STATE TAGS
+// Colors
+// Apolices
+$normal:        $green;
+$partial:       $orange;
+$reduced:       $yellow;
+$cancelled:     $gray-400;
+$canceling:     $indigo;
+$letter:        $magenta;
+
+// Propostas
+$g1:                        #68525A;
+$g1-recebida:               #AD99A0;
+$g1-inic-rec:               #68525A;
+
+$g5:                        $orange;
+$g5-aguard-inic:            #f7d770;
+$g5-anl-riesgo:             #f5c835;
+$g5-aguard-elem-clinic:     #f3ba00;
+$g5-aguard-exam-med:        #F39200;
+$g5-aguard-anl-med:         #DB8400;
+$g5-aguard-exam-med-ad:     #BA7000;
+
+$g6:                        $magenta;
+$g6-anl-med:                #FF85AE;
+$g6-aguard-quest:           #FD4A87;
+$g6-propostas:              #C7114F;
+//finales
+$g2:                        #00C0A9;
+$g2-aceite:                 #009987;
+$g2-aceite-confirm:         #00C0A9;
+
+$g3:                        #E40000;
+$g3-anulada:                #E40000;
+
+$g4:                        #238800;
+$g4-emit:                   #238800;
+$g4-cp-emit:                #2DAC00;
+
+
+$state-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$state-colors: map-merge(
+    (
+        // apolices
+        "normal":                   $normal,
+        "partial":                  $partial,
+        "reduced":                  $reduced,
+        "cancelled":                $cancelled,
+        "canceling":                $canceling,
+        "letter":                   $letter,
+      
+        // Propostas
+        'g1':                       $g1,
+        'g1-recebida':              $g1-recebida,
+        'g1-inic-rec':              $g1-inic-rec,
+
+        'g5':                       $g5,
+        'g5-aguard-inic':           $g5-aguard-inic,
+        'g5-anl-riesgo':            $g5-anl-riesgo,
+        'g5-aguard-elem-clinic':    $g5-aguard-elem-clinic,
+        'g5-aguard-exam-med':       $g5-aguard-exam-med,
+        'g5-aguard-anl-med':        $g5-aguard-anl-med,
+        'g5-aguard-exam-med-ad':    $g5-aguard-exam-med-ad,
+
+        'g6':                       $g6,
+        'g6-anl-med':               $g6-anl-med,
+        'g6-aguard-quest':          $g6-aguard-quest,
+        'g6-propostas':             $g6-propostas,
+        //finales
+        'g2':                       $g2,
+        'g2-aceite':                $g2-aceite,
+        'g2-aceite-confirm':        $g2-aceite-confirm,
+
+        'g3':                       $g3,
+        'g3-anulada':               $g3-anulada,
+
+        'g4':                       $g4,
+        'g4-emit':                  $g4-emit,
+        'g4-cp-emit':               $g4-cp-emit
+    ),
+    $state-colors
+);
+
+[class*="state-"] {
+    display: inline-block;
+    color: $indigo;
+    border-radius: $border-radius;
+    @include responsive-font-size($font-size-sm);
+    padding: $spacer*0.15 0;
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-color: $indigo;
+        border-radius: 100%;
+        margin-right: $spacer*0.5;
+        border: 3px solid $white;
+        @include box-shadow(1px 1px 3px transparentize($black, 0.8));
+    }
+}
+
+// Alternate tag
+// ( state-normal | state-partial | state-reduced | state-cancelled | state-canceling | state-letter )
+@each $color, $value in $state-colors {
+    .state-#{$color} {
+        /*color: #{$value};
+        border-color: transparentize($value, 0.5);*/
+        &:before {
+            background-color: $value;
+        }
+
+    }
+    .state-transparent {
+        color: $dark;
+        &:hover {
+            color: $primary;
+        }
+    }
+}

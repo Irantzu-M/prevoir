@@ -1,0 +1,21 @@
+.modal {
+    &.show {
+        @extend .d-flex, .align-items-center;
+    }
+    .modal-dialog {
+        border: none;
+        width: 900px;
+        max-width: calc(100% - #{$spacer});
+        max-height: calc(100vh - #{$spacer*3});
+    }
+    .modal-content {
+        max-height: calc(100vh - #{$spacer*3});
+    }
+    .modal-body {
+        max-height: calc(100vh - #{$spacer*15});
+        overflow: auto;
+    }
+    .modal-title {
+        @extend .title-md;
+    }
+}

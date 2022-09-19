@@ -1,0 +1,7 @@
+.footer {
+    @extend .pb-5, .mt-3;
+    text-align: center;
+    background-color: $primary;
+    color: $white;
+    @include prevoir-curve('primary');
+}

@@ -1,0 +1,37 @@
+
+.message-heading,
+.message-content {
+    position: relative;
+    z-index: 2;
+}
+.message-heading {
+    @extend .d-flex, .flex-wrap, .mb-3;
+    .message-from {
+        margin-right: $spacer;
+    }
+    .message-from,
+    .message-subject {
+        font-weight: $font-weight-bold;
+    }
+}
+.message-content {
+    img {
+        @extend .mr-3, .mb-3;
+        float: left;
+        max-width: 100%;
+    }
+}
+.message-reply {
+    @extend .py-3;
+    border-top: 1px solid $gray-300;
+}
+.general-contact {
+    .modal-title {
+        color: $primary;
+    }
+}
+.commercial-contact {
+    .modal-title {
+        color: $secondary;
+    }
+}

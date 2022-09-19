@@ -1,0 +1,47 @@
+.card {
+    padding-top: map-get($spacers, 5);
+    padding-bottom: map-get($spacers, 5);
+    padding-left: map-get($spacers, 3);
+    padding-right: map-get($spacers, 3);
+    background: $light;
+    @include box-shadow($card-box-shadow);
+    @include border-radius($border-radius-lg);
+    border: none;
+    height: 100%;
+}
+.card-sm {
+    @extend .card;
+    padding: map-get($spacers, 1);
+}
+.card-detail {
+    @extend .card, .px-sm-5, .px-3;
+    position: relative;
+    .details {
+        position: relative;
+        z-index: 2;
+        .value {
+            display: block;
+            color: $primary;
+            font-weight: $font-weight-bold;
+            font-size: $h1-font-size;
+        }
+        .description {
+            display: block;
+        }
+    }
+    
+
+}
+
+// Alternate card-detail
+@each $color, $value in $theme-colors {
+    .card-detail-#{$color} {
+        @extend .card-detail;
+        .details {
+            .value {
+                color: $value;
+            }
+        }
+    }
+}
+  

@@ -1,0 +1,59 @@
+// SCROLLBAR
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $gray-200;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $gray-400;
+    &:hover {
+        background: $gray-600;
+    }
+}
+
+// PAGE ELEMENTS
+.tag {
+    @include responsive-font-size($font-size-sm);
+    text-transform: uppercase;
+    color: $primary;
+}
+
+
+.title-md {
+    display: block;
+    width: 100%;
+    @include responsive-font-size($h3-font-size);
+    color: $secondary;
+}
+.icon-title {
+    @extend .d-flex, .align-items-center;
+    .material-icons,
+    .material-icons-outlined {
+        @extend .mr-3;
+    }
+}
+
+// Notification number
+.has-notif-mark {
+    position: relative;
+    .notification-number {
+        position: absolute;
+        top: $spacer * 0.5;
+        right: $spacer * 0.5;
+        font-size: $font-size-base *0.7;
+        font-weight: $font-weight-bold;
+        background-color: $secondary;
+        color: $white;
+        padding: $spacer * 0.25;
+        border-radius: 100%;
+        min-width: $spacer*1.5;
+        text-align: center;
+    }
+}

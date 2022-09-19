@@ -1,0 +1,249 @@
+//RESPONSIVE TEXTO BOOSTRAP 4//////////////////
+//GENERALES
+@mixin display($value) {
+    @if $value==flex {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    @else {
+        display: $value;
+    }
+}
+
+@mixin wrap($value:wrap) {
+    -webkit-flex-wrap: $value;
+    -moz-flex-wrap: $value;
+    @if $value==nowrap {
+        -ms-flex-wrap: none;
+    }
+    @else {
+        -ms-flex-wrap: $value;
+    }
+    flex-wrap: $value;
+}
+
+@mixin flex-flow($values: (row nowrap)) {
+    -webkit-flex-flow: $values;
+    -moz-flex-flow: $values;
+    -ms-flex-flow: $values;
+    flex-flow: $values;
+}
+
+@mixin order($value: 0) {
+    -webkit-box-ordinal-group: $value + 1;
+    -webkit-order: $value;
+    -moz-order: $value;
+    -ms-flex-order: $value;
+    order: $value;
+}
+
+@mixin flex-grow($value: 0) {
+    -webkit-box-flex: $value;
+    -webkit-flex-grow: $value;
+    -moz-flex-grow: $value;
+    -ms-flex-positive: $value;
+    flex-grow: $value;
+}
+
+// flex-start | flex-end | center | space-between | space-around 
+@mixin justify-content($justify) {
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;
+    justify-content: $justify;
+    -ms-flex-pack: $justify;
+}
+
+// flex-start | flex-end | center | space-between | space-around | stretch 
+@mixin align-content($align) {
+    -webkit-align-content: $align;
+    -moz-align-content: $align;
+    -ms-align-content: $align;
+    align-content: $align;
+}
+
+// flex-start | flex-end | center | baseline | stretch @mixin align-items($align) {
+@mixin align-items($align) {
+    -webkit-align-items: $align;
+    -moz-align-items: $align;
+    -ms-align-items: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+}
+
+// auto | flex-start | flex-end | center | baseline | stretch 
+@mixin align-self($align) {
+    -webkit-align-self: $align;
+    -moz-align-self: $align;
+    -ms-align-self: $align;
+    align-self: $align;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin noapearance {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+@mixin white-space($value) {
+    white-space: -moz-#{$value};
+    white-space: $value;
+}
+
+@mixin linear-gradient($args...) {
+    background: -o-linear-gradient($args);
+    background: -moz-linear-gradient($args);
+    background: -webkit-linear-gradient($args);
+    background: linear-gradient($args);
+}
+
+@mixin transform($transforms...) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    -o-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin border-radius($value) {
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    -ms-border-radius: $value;
+    border-radius: $value;
+}
+
+@mixin form-control-focus() {
+    &:focus {
+        color: $input-focus-color;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+        outline: 0;
+        @include boxshadow(none);
+    }
+}
+
+// Button sizes
+@mixin button-size($padding-y,
+$padding-x,
+$font-size,
+$line-height,
+$border-radius) {
+    padding: $padding-y $padding-x;
+    @include font-size($font-size);
+    line-height: $line-height;
+    // Manually declare to provide an override to the browser default
+    @include media-breakpoint-down(md) {
+        padding: $padding-y $padding-y * 4;
+    }
+}
+
+@mixin filter($value) {
+    -webkit-filter: $value;
+       -moz-filter: $value;
+         -o-filter: $value;
+            filter: $value;
+}
+
+@mixin button-box-shadow($background) {
+    @include box-shadow(3px 3px 12px transparentize(darken($background, 3%), 0.5));
+}
+
+@mixin button-icon-box-shadow($background) {
+    @include box-shadow(3px 3px 12px transparentize(darken($background, 3%), 0.5), inset 3px 3px 3px rgba(255, 255, 255, 0.25));
+}
+
+@mixin prevoir-curve($color: 'primary', $position: 'before', $curve: 'up') {
+    position: relative;
+    &:#{$position} {
+        content: "";
+        display: block;
+        width: 100%;
+        background-image: url('/assets/img/curve-#{$curve}-#{$color}#{".svg"}');
+        background-size: 101%;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        @if $position == 'before' {
+            bottom: 100%;
+        } @else {
+            top: 0%;
+        }
+        @if $curve == 'up' {
+            padding-top: 3.5%;
+        } 
+        @else {
+            padding-top: 4%;
+        }
+    }
+}
+
+
+// Position mark
+@mixin position-mark($color: $primary) {
+    &:after {
+        content: "";
+        display: block;
+        width: $spacer;
+        height: $spacer;
+        background-color: $color;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        z-index: 10;
+        @include transform-origin(50%);
+        @include transform( translate(-50%, 0) rotate(-45deg) );
+    }
+}
+
+@mixin appearance($appearance: none) {
+  -webkit-appearance: $appearance;
+  -moz-appearance: $appearance;
+  -ms-appearance: $appearance;
+  appearance: $appearance;
+}
+
+@mixin btn-icon($color: $light) {
+    display: inline-block;
+    background-color: $color;
+    border-radius: $btn-icon-border-radius;
+    font-family: $font-family-icons;
+    font-size: $icon-font-size-base;
+    padding: $spacer;
+    @include box-shadow($box-vebel-shadow);
+    @include transition(background-color $default-transition, color $default-transition); 
+}

@@ -1,0 +1,104 @@
+// General buttons and links
+.sect-buttons{
+    border-bottom: 1px solid $gray-300;
+    .btn {
+        @extend .mb-5, .mr-3;
+    }
+}
+.btn {
+    font-weight: $font-weight-bold;
+    &:not(.disabled) {
+        cursor: pointer;
+    }
+}
+.btn-lg,
+.btn-sm {
+    border-radius: $btn-border-radius-sm;
+}
+// Alternate button shadow
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        @include button-box-shadow($value);
+    }
+    .btn-white {
+        @include button-box-shadow($gray-300);        
+    }
+    .btn-transparent {
+        color: $dark;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+// Button icon
+.btn-icon {
+    display: inline-block;
+    color: $primary;
+    &:not(.disabled) {
+        cursor: pointer;
+    }
+    .material-icons,
+    .material-icons-outlined,
+    &[aria-expanded="true"]:after,
+    &[aria-expanded="false"]:after {
+        @include btn-icon;
+        margin-right: map-get($spacers, 2 );
+    }
+    @include hover-focus-active {
+        text-decoration: none;
+        color: $secondary;
+    }
+}
+
+// Alternate icon-buttons
+@each $color, $value in $theme-colors {
+    .btn-icon-#{$color} {
+        @extend .btn-icon;
+        .material-icons,
+        .material-icons-outlined,
+        &[aria-expanded="true"]:after,
+        &[aria-expanded="false"]:after {
+            @include button-variant($value, $value);
+            @include button-icon-box-shadow($value);
+        }
+    }
+}
+  
+@each $color, $value in $theme-colors {
+    .btn-icon-outline-#{$color} {
+        @extend .btn-icon;
+        .material-icons,
+        .material-icons-outlined {
+            @include button-outline-variant($value);
+        }
+    }
+}
+
+.btn-icon-sm {
+    @extend .btn-icon;
+    .material-icons,
+    .material-icons-outlined,
+    &[aria-expanded="true"]:after,
+    &[aria-expanded="false"]:after {
+        font-size: $icon-font-size-sm;
+        padding: $spacer * 0.5;
+    }
+}
+
+// Icon links
+.navbar-actions {
+    @extend .d-flex, .flex-wrap;
+}
+.icon-link {
+    @extend .d-flex, .flex-wrap, .align-items-center;
+    color: $dark;
+    @include transition(color $default-transition);
+    .material-icons {
+        @extend .mx-1;
+    }
+    @include hover-focus-active {
+        text-decoration: none;
+        color: $secondary;
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "prevoir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/bikumaglobal/prevoir.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/bikumaglobal/prevoir/issues"
+  },
+  "homepage": "https://gitlab.com/bikumaglobal/prevoir#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "gulp-cli": "^2.3.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.29.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}

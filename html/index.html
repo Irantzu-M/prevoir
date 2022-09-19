@@ -1,0 +1,1147 @@
+
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>PREVOIR</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+
+    <!-- ESTILOS LIBRERÍAS EXTERNAS-->
+    <!-- Data-tables (tablas ordenables) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+    <!-- Daterangepicker Calendario (rango de fechas) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- Autocompleter JqueryUI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Estilos BKM -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+</head>
+<body><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+    <!-- Header -->
+<header class="header">
+  <div class="top-header">
+    <div class="content">
+      <div class="navbar-brand">
+        <a href="/index.php">
+          <img src="/assets/img/prevoir-logo.png" alt="Prevoir Assureur Solutions Vie"
+            title="Prevoir Assureur Solutions Vie">
+        </a>
+      </div>
+      <div class="navbar-motto flex-grow-1 text-center">
+        <h1>Portal Parceiros Prévoir</h1>
+      </div>
+      <div class="navbar-actions">
+        <!-- Link con icono -->
+        <a href="#" class="icon-link">
+          <span class="material-icons">
+            favorite_border
+          </span>
+          Prévoir Saúde
+        </a>
+        <!-- Fin Links con icono -->
+
+        <span class="notifications">
+          <!-- Boton con icono -->
+          <a class="btn-icon has-notif-mark" data-toggle="collapse" href="#notificationPanel" role="button"
+            aria-expanded="false" aria-controls="notificationPanel" data-target="#notificationPanel">
+            <span class="material-icons">
+              notifications_none
+            </span>
+            <span class="notification-number">99</span>
+          </a>
+          <!-- Fin botón con icono -->
+
+          <!-- Panel notificaciones -->
+          <span id="notificationPanel" class="notification-panel collapse">
+            <button type="button" class="close" data-toggle="collapse" href="#notificationPanel"
+              aria-controls="notificationPanel" data-target="#notificationPanel">
+              <span aria-hidden="true">×</span>
+            </button>
+            <span class="notifications">
+              <!-- Mensaje -->
+              <!-- Añadir la clase ( general-contact | commercial-contact ) -->
+              <a class="message general-contact" href="#message-modal" data-toggle="modal" data-target="#message-modal">
+                <span class="content">
+                  <span>
+                    <span class="from">John Greenway</span> - <span class="subject">Subject of the message</span>
+                  </span>
+                  <span>
+                    <span class="body">Keffiyeh DIY YOLO. Affogato kale chips tacos hell of plantare de...</span>
+                  </span>
+                </span>
+                <span class="actions">
+                  <span class="btn-icon-transparent">
+                    <span class="material-icons">
+                      add_comment
+                    </span>
+                  </span>
+                </span>
+              </a>
+              <!-- Fin mensaje -->
+
+              <!-- Mensaje -->
+              <!-- Añadir la clase ( general-contact | commercial-contact ) -->
+              <a class="message general-contact read" href="#message-modal" data-toggle="modal"
+                data-target="#message-modal">
+                <span class="content">
+                  <span>
+                    <span class="from">John Greenway</span> - <span class="subject">Subject of the message</span>
+                  </span>
+                  <span>
+                    <span class="body">Keffiyeh DIY YOLO. Affogato kale chips tacos hell of plantare de...</span>
+                  </span>
+                </span>
+                <span class="actions">
+                  <span class="btn-icon-transparent">
+                    <span class="material-icons">
+                      add_comment
+                    </span>
+                  </span>
+                </span>
+              </a>
+              <!-- Fin mensaje -->
+
+              <!-- Mensaje -->
+              <!-- Añadir la clase ( general-contact | commercial-contact ) -->
+              <a class="message commercial-contact" href="#message-modal" data-toggle="modal"
+                data-target="#message-modal">
+                <span class="content">
+                  <span>
+                    <span class="from">John Greenway</span> - <span class="subject">Subject of the message</span>
+                  </span>
+                  <span>
+                    <span class="body">Keffiyeh DIY YOLO. Affogato kale chips tacos hell of plantare de...</span>
+                  </span>
+                </span>
+                <span class="actions">
+                  <span class="btn-icon-transparent">
+                    <span class="material-icons">
+                      add_comment
+                    </span>
+                  </span>
+                </span>
+              </a>
+              <!-- Fin mensaje -->
+
+              <!-- Mensaje -->
+              <!-- Añadir la clase ( general-contact | commercial-contact ) -->
+              <a class="message general-contact" href="#message-modal" data-toggle="modal" data-target="#message-modal">
+                <span class="content">
+                  <span>
+                    <span class="from">John Greenway</span> - <span class="subject">Subject of the message</span>
+                  </span>
+                  <span>
+                    <span class="body">Keffiyeh DIY YOLO. Affogato kale chips tacos hell of plantare de...</span>
+                  </span>
+                </span>
+                <span class="actions">
+                  <span class="btn-icon-transparent">
+                    <span class="material-icons">
+                      add_comment
+                    </span>
+                  </span>
+                </span>
+              </a>
+              <!-- Fin mensaje -->
+            </span>
+          </span>
+          <!-- Fin Panel notificaciones -->
+        </span>
+        <a href="#" class="btn-icon">
+          <span class="material-icons">
+            exit_to_app
+          </span>
+        </a>
+        <span class="responsive-menu">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+        </span>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <nav class="navbar navbar-expand-xl">
+    <div class="content">
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/index.php">Estatísticas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Simulador/Vendas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/php/propostas-apolices.php">Propostas/Apólices</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Segurados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sinistros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cobranças</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Comissões</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Comunicaçoes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Prueba controles</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+<!-- Fin Header -->    <div class="page-content">
+        <!-- Dashboard versión simple con una única gráfica -->
+        <!-- Sección de datos -->
+<div class="sect-data">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-chart">
+                    <div class="card-title">
+                        <h2 class="title-md">Apólices</h2>
+                        <div class="has-spinner">
+                            <div class="spinner-container">
+    <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+</div>                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin Sección de datos -->
+        <!-- Filters -->
+        <!-- Sección de filtros -->
+<div class="sect-filters">
+  <div class="container">
+    <div class="form-fields">
+      <div class="form-group">
+        <label class="field-label">Rango de fechas</label>
+        <div class="form-item datepicker">
+          <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" class="datepicker-field" />
+        </div>
+      </div>
+      <div class="form-group form-check">
+        <label class="field-label">Apólices</label>
+        <div class="form-item">
+          <input type="checkbox" class="form-check-input" id="apolices">
+          <label class="form-check-label" for="apolices">Apólices actualmente em vigor</label>
+        </div>
+      </div>
+      <div class="form-group form-radio">
+        <label class="field-label">Apólices</label>
+        <div class="form-item">
+          <input type="radio" class="form-radio-input" id="apolices-radio">
+          <label class="form-radio-label" for="apolices-radio">Apólices actualmente em vigor</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="field-label">Elegir</label>
+        <div class="form-item">
+          <select class="select2-selector" name="selection" multiple="multiple">
+            <option value="AL">Opt 1</option>
+            <option value="WY">Opt 2</option>
+            <option value="AL">Opt 3</option>
+            <option value="WY">Opt 4</option>
+            <option value="AL">Opt 5</option>
+            <option value="WY">Opt 6</option>
+            <option value="AL">Opt 7</option>
+            <option value="WY">Opt 8</option>
+            <option value="AL">Opt 9</option>
+            <option value="WY">Opt 10</option>
+            <option value="AL">Opt 11</option>
+            <option value="WY">Opt 12</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="field-label">Elegir simple</label>
+        <div class="form-item">
+          <select class="select2-selector" name="selection">
+            <option value="AL">Opt 1</option>
+            <option value="WY">Opt 2</option>
+            <option value="AL">Opt 3</option>
+            <option value="WY">Opt 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-actions">
+        <div class="action-group">
+          <button class="btn btn-primary">Filtrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin Sección de filtros -->
+        <!-- Dashboard -->
+        <!-- Sección de datos dashboard -->
+<div class="sect-data">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-6 col-lg-7 pb-4">
+                <div class="card-chart">
+                    <div class="card-title">
+                        <h2 class="title-md">Apólices</h2>
+                    </div>
+                    <div class="has-spinner">
+                        <div class="spinner-container">
+    <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+</div>                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-6 col-lg-5">
+                <div class="row">
+                    <div class="col-xxl-6 col-lg-12 col-md-6 pb-4">
+                        <div class="card-detail-primary">
+                            <span class="material-icons bg-icon">
+                                card_giftcard
+                            </span>
+                            <div class="details">
+                                <span class="value">194</span>
+                                <span class="description">Apólices en carteira</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-lg-12 col-md-6 pb-4">
+                        <div class="card-detail-primary">
+                            <span class="material-icons bg-icon">
+                                card_travel
+                            </span>
+                            <div class="details">
+                                <span class="value">179.000 €</span>
+                                <span class="description">Prémios</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-lg-12 col-md-6 pb-4">
+                        <!-- Card de detalle -->
+                        <div class="card-detail-primary">
+                            <span class="material-icons bg-icon">
+                                supervisor_account
+                            </span>
+                            <div class="details">
+                                <span class="value">194</span>
+                                <span class="description">Productores</span>
+                            </div>
+                        </div>
+                        <!-- Fin card de detalle -->
+                    </div>
+                    <div class="col-xxl-6 col-lg-12 col-md-6 pb-4">
+                        <div class="card-detail-secondary">
+                            <span class="material-icons bg-icon">
+                                content_copy
+                            </span>
+                            <div class="details">
+                                <span class="value">120.000</span>
+                                <span class="description">Propostas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Sección de datos dashboard -->
+        <!-- Accordion -->
+        <!-- Section accordion -->
+<div class="link-accordion">
+    <a class="btn-icon btn-icon-sm" data-toggle="collapse" href="#collapseSectTables" role="button"
+        aria-expanded="false" aria-controls="collapseSectTables">
+        <span class="material-icons add">
+            add
+        </span>
+        <span class="material-icons remove">
+            remove
+        </span>
+    </a>
+</div>
+<div class="collapse" id="collapseSectTables">
+    <!-- Sección de tablas -->
+    <div class="sect-tables">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 pb-4">
+                    <div class="card-table">
+                        <div class="table-header">
+                            <div class="table-title">
+                                <h2 class="title-md">Modalidades</h2>
+                            </div>
+                            <div class="table-actions">
+                                <a href="#" class="btn-icon-primary btn-icon-sm">
+                                    <span class="material-icons">
+                                        save_alt
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Tabla -->
+                        <div class="table-content">
+                            <table class="table data-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Modalidade</th>
+                                        <th scope="col">Descriçao</th>
+                                        <th scope="col">Apól. emitidas</th>
+                                        <th scope="col">Prémios</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Prevoir Vida Domus</td>
+                                        <td>80</td>
+                                        <td>88.000,00 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Prevoir Vida Domus</td>
+                                        <td>80</td>
+                                        <td>88.000,00 €</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Fin tabla -->
+                    </div>
+                </div>
+                <div class="col-xl-6 pb-4">
+                    <div class="card-table">
+                        <div class="table-header">
+                            <div class="table-title">
+                                <h2 class="title-md">Equipas</h2>
+                            </div>
+                            <div class="table-actions">
+                                <a href="#" class="btn-icon-primary btn-icon-sm">
+                                    <span class="material-icons">
+                                        save_alt
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Tabla -->
+                        <div class="table-content">
+                            <table class="table data-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Equipa</th>
+                                        <th scope="col">Prop.</th>
+                                        <th scope="col">Apól. emitidas</th>
+                                        <th scope="col">Prémios</th>
+                                        <th scope="col">Produt.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>BRG1</td>
+                                        <td>22</td>
+                                        <td>18</td>
+                                        <td>17.000,00 €</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AMT1</td>
+                                        <td>14</td>
+                                        <td>14</td>
+                                        <td>15.046,05 €</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AMT2</td>
+                                        <td>21</td>
+                                        <td>23</td>
+                                        <td>13.589,58 €</td>
+                                        <td>7</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Fin tabla -->
+                    </div>
+                </div>
+                <div class="col-xl-6 pb-4">
+                    <div class="card-table">
+                        <div class="table-header">
+                            <div class="table-title">
+                                <h2 class="title-md">Propostas Gravadas / Apólices Emitidas</h2>
+                            </div>
+                            <div class="table-actions">
+                                <a href="#" class="btn-icon-primary btn-icon-sm">
+                                    <span class="material-icons">
+                                        save_alt
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Tabla -->
+                        <div class="table-content">
+                            <table class="table data-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Campo</th>
+                                        <th scope="col">Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Propostas Pendientes</td>
+                                        <td>80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Apól. Emitidas</td>
+                                        <td>75</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Fin tabla -->
+                    </div>
+                </div>
+                <div class="col-xl-6 pb-4">
+                    <div class="card-table">
+                        <div class="table-header">
+                            <div class="table-title">
+                                <h2 class="title-md">Modalidades por equipas</h2>
+                            </div>
+                            <div class="table-actions">
+                                <a href="#" class="btn-icon-primary btn-icon-sm">
+                                    <span class="material-icons">
+                                        save_alt
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Tabla -->
+                        <div class="table-content">
+                            <table class="table data-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Mod.</th>
+                                        <th scope="col">Descriçao</th>
+                                        <th scope="col">Equipa</th>
+                                        <th scope="col">Apól. emitidas</th>
+                                        <th scope="col">Prémios</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Domus</td>
+                                        <td>BRG1</td>
+                                        <td>17</td>
+                                        <td>22.000,00 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>Domus</td>
+                                        <td>AMT1</td>
+                                        <td>14</td>
+                                        <td>23.020,00 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>Solução Total</td>
+                                        <td>BRG1</td>
+                                        <td>8</td>
+                                        <td>21.920,75 €</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Fin tabla -->
+                    </div>
+                </div>
+
+                <div class="col-12 pb-4">
+                    <div class="card-table">
+                        <div class="table-header">
+                            <div class="table-title">
+                                <h2 class="title-md">Apólices por Agente</h2>
+                            </div>
+                            <div class="table-actions">
+                                <a href="#" class="btn-icon-primary btn-icon-sm">
+                                    <span class="material-icons">
+                                        save_alt
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Tabla -->
+                        <div class="table-content">
+                            <table class="table data-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nº Interno</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Equipa</th>
+                                        <th scope="col">Apól. emitidas</th>
+                                        <th scope="col">Situaçao</th>
+                                        <th scope="col">Prémios</th>
+                                        <th scope="col"><span class="d-none">Ações</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>7052</td>
+                                        <td>António Gómez</td>
+                                        <td>BRG1</td>
+                                        <td>17</td>
+                                        <td><span class="state-normal">Normal</span></td>
+                                        <td>22.000,00 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8100</td>
+                                        <td>María Jiménez</td>
+                                        <td>AMT1</td>
+                                        <td>14</td>
+                                        <td><span class="state-partial">Parcialmente Resgatada</span></td>
+                                        <td>23.020,00 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7470</td>
+                                        <td>Francisco Álvarez</td>
+                                        <td>BRG1</td>
+                                        <td>8</td>
+                                        <td><span class="state-reduced">Reduzida</span></td>
+                                        <td>21.920,75 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7052</td>
+                                        <td>António Gómez</td>
+                                        <td>BRG1</td>
+                                        <td>17</td>
+                                        <td><span class="state-cancelled">Anulada</span></td>
+                                        <td>22.000,00 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8100</td>
+                                        <td>María Jiménez</td>
+                                        <td>AMT1</td>
+                                        <td>14</td>
+                                        <td><span class="state-canceling">Em anulação</span></td>
+                                        <td>23.020,00 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7470</td>
+                                        <td>Francisco Álvarez</td>
+                                        <td>BRG1</td>
+                                        <td>8</td>
+                                        <td><span class="state-letter">Com carta</span></td>
+                                        <td>21.920,75 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7052</td>
+                                        <td>António Gómez</td>
+                                        <td>BRG1</td>
+                                        <td>17</td>
+                                        <td><span class="state-letter">Com carta</span></td>
+                                        <td>22.000,00 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8100</td>
+                                        <td>María Jiménez</td>
+                                        <td>AMT1</td>
+                                        <td>14</td>
+                                        <td><span class="state-letter">Com carta</span></td>
+                                        <td>23.020,00 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7470</td>
+                                        <td>Francisco Álvarez</td>
+                                        <td>BRG1</td>
+                                        <td>8</td>
+                                        <td><span class="state-letter">Com carta</span></td>
+                                        <td>21.920,75 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7052</td>
+                                        <td>António Gómez</td>
+                                        <td>BRG1</td>
+                                        <td>17</td>
+                                        <td><span class="state-letter">Com carta</span></td>
+                                        <td>22.000,00 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8100</td>
+                                        <td>María Jiménez</td>
+                                        <td>AMT1</td>
+                                        <td>14</td>
+                                        <td><span class="state-letter">Com carta</span></td>
+                                        <td>23.020,00 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7470</td>
+                                        <td>Francisco Álvarez</td>
+                                        <td>BRG1</td>
+                                        <td>8</td>
+                                        <td><span class="state-letter">Com carta</span></td>
+                                        <td>21.920,75 €</td>
+                                        <td>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    zoom_in
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons-outlined">
+                                                    edit
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    check_circle_outline
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    not_interested
+                                                </span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="material-icons">
+                                                    delete_outline
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Fin Tabla -->
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Fin Sección de tablas -->
+</div>
+<!-- Fin Section accordion -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <span>© 2020 - Portal.Prevoir.Web</span>
+</footer>
+    <!-- Modal -->
+    <!-- Modal -->
+<div class="modal fade" id="message-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!-- Añadir clase ( general-contact | commercial-contact ) -->
+        <div class="modal-content general-contact">
+            <div class="modal-header">
+                <h5 class="modal-title icon-title" id="exampleModalLabel">
+                    <!-- General contact icon -->
+                    <span class="material-icons-outlined">
+                        mode_comment
+                    </span>
+                    <!-- Commercial contact icon -->
+                    <!-- span class="material-icons-outlined">
+                contacts
+            </span -->
+                    Comunicaçao general
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="message-heading">
+                    <div class="message-from">
+                        Emisor del mensaje
+                    </div>
+                    <div class="message-subject">
+                        Asunto del mensaje
+                    </div>
+                </div>
+                <div class="message-content">
+                    <div class="message-body">
+                        <p>Keffiyeh lumbersual try-hard, pug distillery subway tile tousled artisan. Keytar schlitz pug
+                            yuccie VHS hammock. Freegan organic vinyl raw denim glossier hexagon kogi semiotics deep v
+                            portland sartorial yuccie pabst viral. Pok pok vice sustainable franzen next level. Kombucha
+                            unicorn polaroid, irony brunch ugh helvetica vape pabst mixtape master cleanse cold-pressed.
+                        </p>
+                        <p><img src="https://via.placeholder.com/300x150" alt="placeholder" title="placeholder"> Street
+                            art normcore iceland jianbing brooklyn keytar glossier chia vice prism try-hard distillery
+                            flexitarian. Paleo crucifix skateboard yuccie semiotics tofu, gochujang blog try-hard
+                            chartreuse copper mug art party single-origin coffee meggings shoreditch. Cliche knausgaard
+                            forage four dollar toast. Air plant iPhone scenester, 90's venmo cliche selvage drinking
+                            vinegar readymade irony. Ramps pitchfork lo-fi, shabby chic readymade pabst everyday carry
+                            meggings YOLO dreamcatcher hot chicken. Everyday carry bicycle rights small batch four loko.
+                        </p>
+                    </div>
+                </div>
+                <div class="message-reply">
+                    <label for="#reply" class="field-label">Reply</label>
+                    <textarea id="reply" name="textarea" rows="10" cols="50">Write something here</textarea>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Discard</button>
+                <button type="button" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- LIBRERÍAS -->
+    <!-- LIBRERÍAS -->
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<!-- Datatables (tablas ordenables) -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<!-- Daterangepicker Calendario (rango de fechas) -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<!-- Autocompleter JqueryUI -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!-- Select2 -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.data-table').DataTable({
+            "bLengthChange": false,
+            searching: false
+        });
+        $('.datepicker-field').daterangepicker({
+        }, function (start, end, label) {
+            //console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+
+        $('.select2-selector').select2();
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <title>PREVOIR</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+
+    <!-- ESTILOS LIBRERÍAS EXTERNAS-->
+    <!-- Data-tables (tablas ordenables) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+    <!-- Daterangepicker Calendario (rango de fechas) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- Autocompleter JqueryUI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Estilos BKM -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+</head>
+
+<body>
+    <script id="__bs_script__">//<![CDATA[
+        document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="top-header">
+            <div class="content">
+                <div class="navbar-brand">
+                    <a href="/index.php">
+                        <img src="/assets/img/prevoir-logo.png" alt="Prevoir Assureur Solutions Vie"
+                            title="Prevoir Assureur Solutions Vie">
+                    </a>
+                </div>
+                <div class="navbar-motto flex-grow-1 text-center">
+                    <h1>Portal Parceiros Prévoir</h1>
+                </div>
+                <div class="navbar-actions">
+                    <!-- Link con icono -->
+                    <a href="#" class="icon-link">
+                        <span class="material-icons">
+                            favorite_border
+                        </span>
+                        Prévoir Saúde
+                    </a>
+                    <!-- Fin Links con icono -->
+
+                    <span class="notifications">
+                        <!-- Boton con icono -->
+                        <a class="btn-icon has-notif-mark" data-toggle="collapse" href="#notificationPanel"
+                            role="button" aria-expanded="false" aria-controls="notificationPanel"
+                            data-target="#notificationPanel">
+                            <span class="material-icons">
+                                notifications_none
+                            </span>
+                            <span class="notification-number">99</span>
+                        </a>
+                        <!-- Fin botón con icono -->
+
+                        <!-- Panel notificaciones -->
+                        <span id="notificationPanel" class="notification-panel collapse">
+                            <button type="button" class="close" data-toggle="collapse" href="#notificationPanel"
+                                aria-controls="notificationPanel" data-target="#notificationPanel">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <span class="notifications">
+                                <!-- Mensaje -->
+                                <!-- Añadir la clase ( general-contact | commercial-contact ) -->
+                                <a class="message general-contact" href="#message-modal" data-toggle="modal"
+                                    data-target="#message-modal">
+                                    <span class="content">
+                                        <span>
+                                            <span class="from">John Greenway</span> - <span class="subject">Subject of
+                                                the message</span>
+                                        </span>
+                                        <span>
+                                            <span class="body">Keffiyeh DIY YOLO. Affogato kale chips tacos hell of
+                                                plantare de...</span>
+                                        </span>
+                                    </span>
+                                    <span class="actions">
+                                        <span class="btn-icon-transparent">
+                                            <span class="material-icons">
+                                                add_comment
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <!-- Fin mensaje -->
+
+                                <!-- Mensaje -->
+                                <!-- Añadir la clase ( general-contact | commercial-contact ) -->
+                                <a class="message general-contact read" href="#message-modal" data-toggle="modal"
+                                    data-target="#message-modal">
+                                    <span class="content">
+                                        <span>
+                                            <span class="from">John Greenway</span> - <span class="subject">Subject of
+                                                the message</span>
+                                        </span>
+                                        <span>
+                                            <span class="body">Keffiyeh DIY YOLO. Affogato kale chips tacos hell of
+                                                plantare de...</span>
+                                        </span>
+                                    </span>
+                                    <span class="actions">
+                                        <span class="btn-icon-transparent">
+                                            <span class="material-icons">
+                                                add_comment
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <!-- Fin mensaje -->
+
+                                <!-- Mensaje -->
+                                <!-- Añadir la clase ( general-contact | commercial-contact ) -->
+                                <a class="message commercial-contact" href="#message-modal" data-toggle="modal"
+                                    data-target="#message-modal">
+                                    <span class="content">
+                                        <span>
+                                            <span class="from">John Greenway</span> - <span class="subject">Subject of
+                                                the message</span>
+                                        </span>
+                                        <span>
+                                            <span class="body">Keffiyeh DIY YOLO. Affogato kale chips tacos hell of
+                                                plantare de...</span>
+                                        </span>
+                                    </span>
+                                    <span class="actions">
+                                        <span class="btn-icon-transparent">
+                                            <span class="material-icons">
+                                                add_comment
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <!-- Fin mensaje -->
+
+                                <!-- Mensaje -->
+                                <!-- Añadir la clase ( general-contact | commercial-contact ) -->
+                                <a class="message general-contact" href="#message-modal" data-toggle="modal"
+                                    data-target="#message-modal">
+                                    <span class="content">
+                                        <span>
+                                            <span class="from">John Greenway</span> - <span class="subject">Subject of
+                                                the message</span>
+                                        </span>
+                                        <span>
+                                            <span class="body">Keffiyeh DIY YOLO. Affogato kale chips tacos hell of
+                                                plantare de...</span>
+                                        </span>
+                                    </span>
+                                    <span class="actions">
+                                        <span class="btn-icon-transparent">
+                                            <span class="material-icons">
+                                                add_comment
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <!-- Fin mensaje -->
+                            </span>
+                        </span>
+                        <!-- Fin Panel notificaciones -->
+                    </span>
+                    <a href="#" class="btn-icon">
+                        <span class="material-icons">
+                            exit_to_app
+                        </span>
+                    </a>
+                    <span class="responsive-menu">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation"></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <nav class="navbar navbar-expand-xl">
+            <div class="content">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/index.php">Estatísticas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Simulador/Vendas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/php/propostas-apolices.php">Propostas/Apólices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Segurados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sinistros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cobranças</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Comissões</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Comunicaçoes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Prueba controles</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- Fin Header -->
+    <div class="page-content">
+        <!-- Filters -->
+
+        <div class="page-detail">
+            <div class="sect-title">
+                <h1>Apolice</h1>
+            </div>
+            <div class="sect-content">
+                <div class="container">
+                    <div class="card">
+                        <!-- Sección de campos no editables -->
+                        <div class="sect-fields">
+                            <div class="form-group">
+                                <label class="field-label">Código</label>
+                                <div class="form-item">
+                                    <input class="form-control" disabled type="text" placeholder="2009">
+                                </div>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="field-label">Agente</label>
+                                <div class="form-item">
+                                    <input class="form-control" disabled type="text" placeholder="Agente">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="field-label">Segurado</label>
+                                <div class="form-item">
+                                    <input class="form-control" disabled type="text" placeholder="Wilek Carver">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="field-label">Id</label>
+                                <div class="form-item">
+                                    <input class="form-control" disabled type="text" placeholder="2009">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="field-label">Morada</label>
+                                <div class="form-item">
+                                    <input class="form-control" disabled type="text" placeholder="Morada">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="field-label">Situaçao</label>
+                                <div class="form-item">
+                                    <input class="form-control" disabled type="text" placeholder="Em Vigor">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="field-label">Estructura</label>
+                                <div class="form-item">
+                                    <input class="form-control" disabled type="text" placeholder="Estructura">
+                                </div>
+                            </div>
+                            <div class="col-12 pt-5 pb-3 text-center">
+                                <a class="btn-icon-sm">
+                                    <span class="material-icons">
+                                        get_app
+                                    </span> Download ficha segurado/titular
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Fin Sección de campos no editables -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-light pb-5">
+
+
+            <!-- Sección Tabs (nav-pills) -->
+            <div class="sect-nav-pills">
+                <div class="container">
+                    <ul class="nav nav-pills" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab"
+                                aria-controls="pills-1" aria-selected="true">Informaçao</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab"
+                                aria-controls="pills-2" aria-selected="false">Titular</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab"
+                                aria-controls="pills-3" aria-selected="false">Perssoas Seguras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab"
+                                aria-controls="pills-4" aria-selected="false">Dados Técnicos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-5" role="tab"
+                                aria-controls="pills-5" aria-selected="false">Garantías</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-1" role="tabpanel"
+                            aria-labelledby="pills-1-tab">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet dictum nisl eu
+                                sagittis.
+                                Class
+                                aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                                Morbi quis
+                                nisi ex. In
+                                commodo ligula in enim cursus maximus. Maecenas efficitur lorem metus, quis sagittis
+                                libero
+                                imperdiet quis.
+                                Curabitur et mollis dolor, sed accumsan mauris. Orci varius natoque penatibus et magnis
+                                dis
+                                parturient
+                                montes, nascetur ridiculus mus. Integer ultricies consequat aliquet. Pellentesque
+                                tincidunt
+                                efficitur sem.
+                                In euismod augue et ipsum semper, vitae fringilla mauris posuere.</p>
+                            <p>Praesent mattis sapien sem, id mattis dolor auctor id. Nunc non laoreet est, ac volutpat
+                                nunc. Sed
+                                finibus
+                                aliquet euismod. Nulla non volutpat velit. Nullam ultrices nulla in velit consectetur,
+                                quis rutrum
+                                nulla
+                                euismod. Proin maximus quam at massa elementum scelerisque. Proin finibus libero quis
+                                est sodales
+                                pharetra.
+                                Ut vitae leo ut elit vestibulum aliquet. Duis rutrum, lacus in semper fringilla, ipsum
+                                neque finibus
+                                enim,
+                                in euismod diam purus id metus. Phasellus molestie lacinia placerat. Maecenas bibendum
+                                sed neque sed
+                                scelerisque. Nunc ut turpis ut elit congue pharetra. Sed et dolor sed magna suscipit
+                                fringilla nec
+                                in risus.
+                                Pellentesque vitae diam felis. Pellentesque sed lobortis orci. Mauris eget erat eu eros
+                                dignissim
+                                vehicula.
+                            </p>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                            <div class="sect-fields">
+                                <div class="container">
+                                    <div class="form-fields">
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_CodigoNome">Código e Nome</label>
+                                            <input class="form-control" type="text" id="Titular_CodigoNome"
+                                                name="Titular.CodigoNome" value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.CodigoNome" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_DataNascimiento">Data
+                                                nascimiento</label>
+                                            <div class="form-item datepicker">
+                                                <input type="text" name="daterange" value="01/01/2018 - 01/15/2018"
+                                                    class="datepicker-field" disabled="disabled" />
+                                            </div>
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.DataNascimiento"
+                                                data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_Rua">Rua</label>
+                                            <input class="form-control" type="text" id="Titular_Rua" name="Titular.Rua"
+                                                value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.Rua" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_CodigoPostal">Código postal</label>
+                                            <input class="form-control" type="text" id="Titular_CodigoPostal"
+                                                name="Titular.CodigoPostal" value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.CodigoPostal"
+                                                data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_Localidade">Localidade</label>
+                                            <input class="form-control" type="text" id="Titular_Localidade"
+                                                name="Titular.Localidade" value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.Localidade" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_EstadoCivil">Estado civil</label>
+                                            <input class="form-control" type="text" id="Titular_EstadoCivil"
+                                                name="Titular.EstadoCivil" value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.EstadoCivil" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_Profissao">Profissao</label>
+                                            <input class="form-control" type="text" id="Titular_Profissao"
+                                                name="Titular.Profissao" value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.Profissao" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_NumBi">N.º B.I.</label>
+                                            <input class="form-control" type="text" id="Titular_NumBi"
+                                                name="Titular.NumBi" value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.NumBi" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_Telefone">Telefone</label>
+                                            <input class="form-control" type="text" id="Titular_Telefone"
+                                                name="Titular.Telefone" value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.Telefone" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_NumContribuinte">N.º
+                                                Contribuinte</label>
+                                            <input class="form-control" type="text" id="Titular_NumContribuinte"
+                                                name="Titular.NumContribuinte" value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.NumContribuinte"
+                                                data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="field-label" for="Titular_NIBCobranca">NIB-Cobrança</label>
+                                            <input class="form-control" type="text" id="Titular_NIBCobranca"
+                                                name="Titular.NIBCobranca" value="" disabled="disabled">
+                                            <span class="field-validation-valid text-danger"
+                                                data-valmsg-for="Titular.NIBCobranca" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+                            <!-- Tabla -->
+                            <div class="table-content">
+                                <table class="table data-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nº Interno</th>
+                                            <th class="text-left" scope="col">Nome</th>
+                                            <th scope="col">Equipa</th>
+                                            <th scope="col">Apól. emitidas</th>
+                                            <th class="text-left" scope="col">Situaçao</th>
+                                            <th scope="col">Prémios</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>7052</td>
+                                            <td class="text-left">António Gómez</td>
+                                            <td>BRG1</td>
+                                            <td>17</td>
+                                            <td class="text-left"><span class="state-normal">Normal</span></td>
+                                            <td>22.000,00 €</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8100</td>
+                                            <td class="text-left">María Jiménez</td>
+                                            <td>AMT1</td>
+                                            <td>14</td>
+                                            <td class="text-left"><span class="state-partial">Parcialmente Resgatada</span></td>
+                                            <td>23.020,00 €</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Fin Tabla -->
+                        </div>
+                        <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
+                            <div class="sect-fields">
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_Apolice">Apolice</label>
+                                    <input class="form-control" type="text" id="DadosTecnicos_Apolice"
+                                        name="DadosTecnicos.Apolice" value="" disabled="disabled"><span
+                                        class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.Apolice" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_TipoCobranca">Tipo cobrança</label>
+                                    <input class="form-control" type="text" id="DadosTecnicos_TipoCobranca"
+                                        name="DadosTecnicos.TipoCobranca" value="" disabled="disabled"><span
+                                        class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.TipoCobranca" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_Periodo">Periodo</label>
+                                    <div class="form-item datepicker">
+                                        <input type="text" disabled="disabled" name="daterange"
+                                            class="datepicker-field">
+                                    </div>
+                                    <div class="input-group-append" data-target="#DadosTecnicos_Periodo"
+                                        data-toggle="daterangepicker"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_PremioInicial">Premio inicial</label>
+                                    <input class="form-control" type="text" data-val="true"
+                                        data-val-number="The field Premio inicial must be a number."
+                                        id="DadosTecnicos_PremioInicial" name="DadosTecnicos.PremioInicial" value=""
+                                        disabled="disabled">
+                                    <span class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.PremioInicial" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_Situacao">Situaçao</label>
+                                    <input class="form-control" type="text" id="DadosTecnicos_Situacao"
+                                        name="DadosTecnicos.Situacao" value="" disabled="disabled">
+                                    <span class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.Situacao" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_UltimoPremioPago">Ultimo premio
+                                        pago</label>
+                                    <input class="form-control" type="text" id="DadosTecnicos_UltimoPremioPago"
+                                        name="DadosTecnicos.UltimoPremioPago" value="" disabled="disabled">
+                                    <span class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.UltimoPremioPago"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_DataSituacao">data da situaçao</label>
+                                    <div class="form-item datepicker">
+                                        <input type="text" disabled="disabled" name="daterange"
+                                            class="datepicker-field">
+                                    </div>
+                                    <span class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.DataSituacao" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_CapitalSubscrito">Capital
+                                        suscrito</label>
+                                    <input class="form-control" type="text" data-val="true"
+                                        data-val-number="The field Capital suscrito must be a number."
+                                        id="DadosTecnicos_CapitalSubscrito" name="DadosTecnicos.CapitalSubscrito"
+                                        value="" disabled="disabled">
+                                    <span class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.CapitalSubscrito"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_DuracaoContrato">Duraçao
+                                        contrato</label>
+                                    <input class="form-control" type="number" data-val="true"
+                                        data-val-required="Campo obligatorio" id="DadosTecnicos_DuracaoContrato"
+                                        name="DadosTecnicos.DuracaoContrato" value="" disabled="disabled">
+                                    <span class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.DuracaoContrato"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label" for="DadosTecnicos_CapitalActual">Capital Actual</label>
+                                    <input class="form-control" type="text" data-val="true"
+                                        data-val-number="The field Capital Actual must be a number."
+                                        id="DadosTecnicos_CapitalActual" name="DadosTecnicos.CapitalActual" value=""
+                                        disabled="disabled">
+                                    <span class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.CapitalActual" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="field-label"
+                                        for="DadosTecnicos_Fraccionamiento">Fraccionamiento</label>
+                                    <input class="form-control" type="text" id="DadosTecnicos_Fraccionamiento"
+                                        name="DadosTecnicos.Fraccionamiento" value="" disabled="disabled">
+                                    <span class="field-validation-valid text-danger"
+                                        data-valmsg-for="DadosTecnicos.Fraccionamiento"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab">...</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin sección Tabs (nav-pills) -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <span>© 2020 - Portal.Prevoir.Web</span>
+    </footer>
+    <!-- Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="message-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!-- Añadir clase ( general-contact | commercial-contact ) -->
+            <div class="modal-content general-contact">
+                <div class="modal-header">
+                    <h5 class="modal-title icon-title" id="exampleModalLabel">
+                        <!-- General contact icon -->
+                        <span class="material-icons-outlined">
+                            mode_comment
+                        </span>
+                        <!-- Commercial contact icon -->
+                        <!-- span class="material-icons-outlined">
+                contacts
+            </span -->
+                        Comunicaçao general
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="message-heading">
+                        <div class="message-from">
+                            Emisor del mensaje
+                        </div>
+                        <div class="message-subject">
+                            Asunto del mensaje
+                        </div>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-body">
+                            <p>Keffiyeh lumbersual try-hard, pug distillery subway tile tousled artisan. Keytar schlitz
+                                pug
+                                yuccie VHS hammock. Freegan organic vinyl raw denim glossier hexagon kogi semiotics deep
+                                v
+                                portland sartorial yuccie pabst viral. Pok pok vice sustainable franzen next level.
+                                Kombucha
+                                unicorn polaroid, irony brunch ugh helvetica vape pabst mixtape master cleanse
+                                cold-pressed.
+                            </p>
+                            <p><img src="https://via.placeholder.com/300x150" alt="placeholder" title="placeholder">
+                                Street
+                                art normcore iceland jianbing brooklyn keytar glossier chia vice prism try-hard
+                                distillery
+                                flexitarian. Paleo crucifix skateboard yuccie semiotics tofu, gochujang blog try-hard
+                                chartreuse copper mug art party single-origin coffee meggings shoreditch. Cliche
+                                knausgaard
+                                forage four dollar toast. Air plant iPhone scenester, 90's venmo cliche selvage drinking
+                                vinegar readymade irony. Ramps pitchfork lo-fi, shabby chic readymade pabst everyday
+                                carry
+                                meggings YOLO dreamcatcher hot chicken. Everyday carry bicycle rights small batch four
+                                loko.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="message-reply">
+                        <label for="#reply" class="field-label">Reply</label>
+                        <textarea id="reply" name="textarea" rows="10" cols="50">Write something here</textarea>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Discard</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LIBRERÍAS -->
+    <!-- LIBRERÍAS -->
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- Datatables (tablas ordenables) -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <!-- Daterangepicker Calendario (rango de fechas) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Autocompleter JqueryUI -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.data-table').DataTable({
+                "bLengthChange": false,
+                searching: false
+            });
+            $('.datepicker-field').daterangepicker({
+            }, function (start, end, label) {
+                //console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            });
+
+            $('.select2-selector').select2();
+        });
+    </script>
+</body>
+
+</html>

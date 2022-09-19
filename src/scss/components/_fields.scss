@@ -1,0 +1,17 @@
+.sect-fields {
+    padding-top: 0;
+    @extend .d-flex, .flex-wrap, .align-items-end;
+    .form-fields {
+        @extend .flex-grow-1, .row;
+        width: 100%;
+    }
+    .form-group {
+        min-width: 25%;
+        &:not([class*="col-"]) {
+            @extend .col-xl-3, .col-lg-4, .col-md-6, .col-12;
+        }
+        .form-item {
+            width: 100%;
+        }
+    }
+}

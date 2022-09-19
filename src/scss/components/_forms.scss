@@ -1,0 +1,277 @@
+.form-control {
+    @extend .px-3;
+    background-color: $light;
+    border: none !important;
+    @include border-radius($btn-border-radius);
+    &:not(:disabled):not([readonly]) {
+        @include box-shadow($box-vebel-shadow);
+    }
+    &:disabled,
+    &[readonly] {
+      background-color: $transparent;
+      border: 1px solid $gray-300 !important;
+      cursor: not-allowed;
+    }
+
+}
+.pushed {
+    @include box-shadow($pushed-box-shadow);
+    background-color: $medium;
+}
+input[type="text"]:not(.datepicker-field) {
+    &:focus {
+        @extend .pushed;
+    }
+}
+.field-label {
+    @extend .tag, .px-2;
+    width: 100%;
+    height: 1rem;
+}
+.form-item {
+    @extend .px-1, .mb-2, .d-flex, .flex-wrap, .align-items-center;
+    width: 100%;
+}
+
+.form-group {
+    @extend .mb-1;
+}
+
+input[type="text"],
+select,
+option {
+    @extend .form-control;
+}
+textarea {
+    @extend .form-control, .pushed;
+    max-height: 12rem;
+}
+
+//checkbox
+.form-check-input {
+    margin:0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -100vh;
+    left: -100vw;
+    opacity: 0;
+    & + .form-check-label {
+        @extend .d-flex, .flex-wrap, .align-items-center;
+        position: relative;
+        padding-left: map-get($spacers, 4 );
+        min-height: 42px;
+        cursor: pointer;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            padding-top: 10px;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 2px;
+            background-color: $white;
+            border: 1px solid $primary;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            @include transform(translate(0,-50%));
+        }
+        &:after {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background-color: $transparent;
+            position: absolute;
+            top: 50%;
+            left: 3px;
+            @include transform(translate(0,-50%));
+            @include transition(background $default-transition*0.5);
+        }
+
+    }
+    &:checked + .form-check-label {
+        @extend .d-flex, .flex-wrap, .align-items-center;
+        position: relative;
+        padding-left: map-get($spacers, 4 );
+        min-height: 42px;
+        &:before {
+            border: 1px solid $secondary;
+        }
+        &:after {
+            background-color: $secondary;
+        }
+
+    }
+}
+
+//radiobutton
+.form-radio-input {
+    margin:0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -100vh;
+    left: -100vw;
+    opacity: 0;
+    & + .form-radio-label {
+        @extend .d-flex, .flex-wrap, .align-items-center;
+        position: relative;
+        padding-left: map-get($spacers, 4 );
+        min-height: 42px;
+        cursor: pointer;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            padding-top: 10px;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 16px;
+            background-color: $white;
+            border: 1px solid $primary;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            @include transform(translate(0,-50%));
+        }
+        &:after {
+            content: "";
+            display: block;
+            width: 9px;
+            height: 9px;
+            border-radius: 16px;
+            background-color: $transparent;
+            position: absolute;
+            top: 50%;
+            left: 3px;
+            @include transform(translate(0,-50%));
+            @include transition(background $default-transition*0.5);
+        }
+
+    }
+    &:checked + .form-radio-label {
+        @extend .d-flex, .flex-wrap, .align-items-center;
+        position: relative;
+        padding-left: map-get($spacers, 4 );
+        min-height: 42px;
+        &:before {
+            border: 1px solid $secondary;
+        }
+        &:after {
+            background-color: $secondary;
+        }
+
+    }
+}
+
+//validator
+.field-validation-error {
+    @extend .py-1, .px-2, .mt-2, .d-block;
+    @include responsive-font-size($font-size-sm);
+    width: 100%;
+    border-radius: $border-radius-sm;
+    background: $secondary-light;
+}
+
+// DATEPICKER
+// datepicker field
+.form-item.datepicker {
+    position: relative;
+    input {
+        &:focus,
+        &:active {
+            @extend .pushed;
+        }
+    }
+    &:after {
+        content: "calendar_today";
+        @extend .d-flex, .align-items-center;
+        position: absolute;
+        top: 21px;
+        right: 0%;
+        @include transform(translate(-50%, -50%));
+        font-family: $font-family-icons;
+        padding: 0 $spacer*0.15 0 $spacer*0.75;
+        height: 42px;
+        border-left: 1px solid $gray-300;
+    }
+}
+.daterangepicker {
+    @extend .p-3;
+    background-color: $light;
+    border: none;
+    border-radius: $border-radius;
+    @include box-shadow($box-vebel-shadow);
+    &:before {
+        border: none;
+    }
+    &:after {
+        border-bottom-color: $light;
+    }
+    td {
+        &.in-range {
+            background-color: $primary-light;
+        }
+        &.active,
+        &.end-date {
+            background-color: $primary;
+        }
+        &.off {
+            background-color: $transparent !important;
+            color: $gray-400;
+        }
+        &:hover {
+            background-color: $secondary !important;
+            color: $white !important;
+        }
+    }
+    .calendar-table {
+        background-color: $transparent;
+        border: none;
+        th {
+            font-weight: normal;
+            color: $primary;
+            font-family: $font-family-base;
+        }
+        .month {
+            font-size: $font-size-base;
+            color: $secondary;
+        }
+        .prev,
+        .next {
+            opacity: 0.6;
+            @include hover-focus-active {
+                background: none;
+                opacity: 1;
+            }
+        }
+    }
+    .drp-buttons {
+        @extend .d-flex, .flex-wrap, .justify-content-between;
+        border: none;
+        .drp-selected {
+            @extend .p-3, .mb-sm-0, .mb-3, .form-control, .flex-grow-1, .d-flex, .align-items-center, .justify-content-center;
+            @extend .pushed;
+            width: auto;
+            font-size: $font-size-sm;
+            color: $secondary
+        }
+        .btn {
+            @extend .btn;
+            @include media-breakpoint-down(xs) {
+                margin: 0;
+            }
+            &.btn-primary {
+                @extend .btn-primary;
+            }
+            &.btn-default {
+                @extend .btn-white;
+            }
+        }
+    }
+}

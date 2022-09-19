@@ -1,0 +1,183 @@
+// Card containing tables
+.card-table {
+    @extend .card, .py-3;
+    border-radius: 0;
+    .dataTables_wrapper {
+        width: 100%;
+    }
+    .table {
+        width: 100%;
+    }
+    .table-header {
+        @extend .row, .pb-1, .align-items-center;
+        border-bottom: 1px solid $secondary;
+        .table-title {
+            @extend .col;
+        }
+        .table-actions {
+            @extend .col-auto, .mb-1;
+        }
+    }
+    .table-content {
+        @extend .row;
+    }
+}
+@include media-breakpoint-down(lg) {
+    .table-content {
+        overflow-x: scroll;
+        .table {
+            th,
+            td {
+                min-width: 150px;
+            }
+        }
+    }
+}
+
+
+// Data-table container 
+.dataTables_wrapper {
+    @extend .d-flex, .flex-wrap;
+    & > div {
+        @extend .col;
+    }
+
+    label {
+        @extend .field-label;
+    }
+    .dataTables_length {
+        select {
+            border-radius: $border-radius-sm;
+        }
+    }
+    .dataTables_info {
+        color: $secondary;
+    }
+    .dataTables_info,
+    .dataTables_paginate {
+        @extend .p-3, .d-flex, .align-items-center, .justify-content-end;
+        position: sticky;
+        right: 0;
+    }
+    .dataTables_paginate {
+        @extend .w-auto, .col-auto;
+        .paginate_button {
+            &.previous,
+            &.next {
+                font-size: 0;
+                border: none;
+                &:after {
+                    @include btn-icon;
+                    color: $primary;
+                    font-size: $icon-font-size-xs;
+                    padding: $spacer * 0.1;
+                    text-align: center;
+                    min-width: $spacer*1.8;
+                }
+                &.disabled {
+                    display: none;
+                }
+                @include hover-focus-active {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    @include box-shadow(none);
+                    &:not(.disabled):after {
+                        color: $secondary;
+                    }
+                }
+            }
+            &.previous {
+                &:after {
+                    content: "navigate_before";
+                }
+            }
+            &.next {
+                &:after {
+                    content: "navigate_next";
+                }
+            }
+            &:not(.previous):not(.next) {
+                background: none;
+                border: none;
+                color: $indigo;
+                font-size: $font-size-sm;
+                &.current {
+                    font-weight: $font-weight-bold;
+                    color: $primary !important;
+                }
+                &:not(.current) {
+                    @include hover-focus-active {
+                        color: $secondary !important;
+                    }
+                }
+                @include hover-focus-active {
+                    border: none;
+                    outline: none;
+                    @include box-shadow(none);
+                }
+            }
+        }
+    }
+}
+
+// The table itself
+table.table,
+table.data-table {
+    color: $indigo;
+    @include responsive-font-size($font-size-sm);
+    border-bottom: none;
+    th,
+    td {
+        border-top: 1px solid $transparent;
+    }
+    thead th,
+    tbody th,
+    tbody td {
+        padding: $spacer*0.5 $spacer*0.75;
+    }
+    thead {
+        th {
+            padding-right: $spacer *1.5;
+            text-transform: uppercase;
+            color: $primary;
+            font-weight: normal;
+            border-bottom: 2px solid $gray-300;
+            background-size: $font-size-base*0.5;
+            &.sorting,
+            &.sorting_asc,
+            &.sorting_desc {
+                background-position: calc(100% - #{$spacer*0.75}) center;
+            }
+            &.sorting {
+                background-image: url('../img/sort.png');
+            }
+            &.sorting_asc {
+                background-image: url('../img/sort-asc.png');
+            }
+            &.sorting_desc {
+                background-image: url('../img/sort-desc.png');
+            }
+        }
+    }
+    tbody {
+        tr {
+            background: $transparent;
+        }
+    }
+    &.no-footer {
+        border-bottom: 1px solid $gray-300;
+    }
+
+    th:not(:first-child):not(:last-child):not(.text-left):not(.text-right),
+    td:not(:first-child):not(:last-child):not(.text-left):not(.text-right) {
+        text-align: center;
+    }
+    
+    th:last-child,
+    td:last-child {
+        text-align: right;
+    }
+
+}
+

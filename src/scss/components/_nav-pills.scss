@@ -1,0 +1,20 @@
+.sect-nav-pills {
+    @extend .pb-6;
+}
+.nav-pills {
+    @extend .justify-content-center;
+    @extend .mt-4, .mb-5;
+    border-bottom: 1px solid $gray-300;
+    .nav-link {
+        border-radius: 0;
+        color: $indigo;
+        &.active {
+            background-color: transparent;
+            color: $secondary;
+            border-bottom: 3px solid $secondary;
+        }
+        &:hover {
+            color: $secondary;
+        }
+    }
+}

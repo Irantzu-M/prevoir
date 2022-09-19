@@ -1,0 +1,49 @@
+.link-accordion {
+    @extend .d-flex, .flex-wrap, .align-items-center;
+    @extend .pt-4, .pb-5;
+    &:before,
+    &:after {
+        @extend .col;
+        content: "";
+        display: block;
+        border-bottom: 1px solid $gray-300;
+    }
+    [aria-expanded="true"] {
+        .material-icons,
+        .material-icons-outlined {
+            &.add {
+                @extend .d-none;
+            }
+        }
+    }
+    
+    [aria-expanded="false"] {
+        .material-icons,
+        .material-icons-outlined {
+            &.remove {
+                @extend .d-none;
+            }
+        }
+    }
+    .material-icons,
+    .material-icons-outlined {
+        @include transition(transform $default-transition, color $default-transition);
+    }
+    .material-icons,
+    .material-icons-outlined {
+        &.add {
+            &:hover {
+                @include transform(rotate(90deg));
+            }
+        }
+    }
+    .material-icons,
+    .material-icons-outlined {
+        &.remove {
+            &:hover {
+                //@include transform(rotate(180deg));
+            }
+        }
+    }
+    
+}

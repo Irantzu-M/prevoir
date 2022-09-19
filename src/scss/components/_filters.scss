@@ -1,0 +1,28 @@
+.sect-filters {
+    @extend .sect-fields, .py-4;
+    border-bottom: 1px solid $gray-300;
+    &:not(:first-child) {
+        border-top: 1px solid $gray-300;
+    }
+    .form-fields {
+        & > div:nth-last-child(n+5):first-child ~ .form-actions {
+            @include media-breakpoint-up(xl) {
+                @include display(flex);
+                @include justify-content(flex-end);
+                padding-top: 0;
+                padding-bottom: 0;
+                min-width: 100%;
+            }
+        }
+    }
+    .form-actions {
+        @extend .col;
+        padding-top: $spacer*1.5;
+    }
+    .action-group {
+        .btn {
+            @extend .mr-1;
+            margin-bottom: $spacer*0.5;
+        }
+    }
+}

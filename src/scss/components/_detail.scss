@@ -1,0 +1,49 @@
+
+.page-detail {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../assets/img/smile-long.jpg');
+    padding-bottom: map-get($spacers, 9 );
+}
+.sect-title {
+    padding-top: map-get($spacers, 5 ) !important;
+    padding-bottom: map-get($spacers, 3 ) !important;
+    background: $medium;
+    &,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        display: block;
+        @include responsive-font-size($h2-font-size);
+        width: 100%;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        color: $secondary;
+    }
+}
+.sect-content {
+    @extend .py-4;
+    position: relative;
+    @include prevoir-curve('medium', 'after', 'down');
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: $spacer *6;
+        background-color: $medium;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &:after {
+        top: $spacer*6;
+    }
+    & > .container {
+        position: relative;
+        z-index: 2;
+    }
+}

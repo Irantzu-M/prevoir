@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Round');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Sharp');
+
+//VERVEINE REGULAR
+@font-face {
+    font-family: 'Verveine';
+    src: url('../fonts/VerveineRegular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/VerveineRegular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/VerveineRegular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/VerveineRegular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/VerveineRegular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}

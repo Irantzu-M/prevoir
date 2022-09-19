@@ -1,0 +1,98 @@
+.notifications {
+    display: inline-block;
+    position: relative;
+    .close {
+        display: inline-block;
+        width: $spacer *3;
+        text-align: right;
+        margin-bottom: $spacer*0.5;
+        @include align-self(flex-end);
+        .material-icons {
+            font-size: $icon-font-size-sm;
+        }
+        @include hover-focus-active {
+            outline: none;
+            border: none;
+            color: $secondary;
+        }
+    }
+    [data-target="#notificationPanel"] {
+        & + .notification-panel {
+            display: none;
+        }
+        &[aria-expanded="true"] + .notification-panel {
+            @extend .card, .pt-3;
+            background-color: $primary-light;
+            position: absolute;
+            min-width: 300px;
+            height: auto;
+            right: -$spacer;
+            width: 600px;
+            max-width: calc(100vw - #{$spacer}*3);
+            z-index: 100;
+
+            @include position-mark($primary-light);
+            &:after {
+                bottom: 100%;
+                left: auto;
+                top: auto;
+                right: $spacer;
+                @include transform(rotate(45deg) translate(-50%, 120%));
+            }
+            @include media-breakpoint-down(sm) {
+                right: -$spacer * 8;
+                &:after {
+                    right: $spacer *8.5;
+                }
+            }
+        }
+    }
+    .notifications {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .message {
+        @extend .d-flex, .flex-wrap, .align-items-center, .mx-2, .mb-3;
+        &:hover {
+            text-decoration: none;
+        }
+        &:not(.read) {
+            background-color: $white;
+            border-left: 3px solid $primary;
+            @include box-shadow($default-box-shadow);
+            color: $indigo;
+        }
+        &.read {
+            background-color: transparentize($white, 0.6);
+            border-left: 3px solid $gray-400;
+            color: $gray-400;
+        }
+        &.general-contact {
+            border-left: 3px solid $primary;
+            &.read {
+                border-left: 3px solid $primary-light;
+            }
+        }
+        &.commercial-contact {
+            border-left: 3px solid $secondary;
+            &.read {
+                border-left: 3px solid $secondary-light;
+            }
+        }
+        .content {
+            @extend .col;
+            .from, .subject {
+                font-weight: $font-weight-bold;
+            }
+            .body {
+                @include responsive-font-size($font-size-sm);
+            }
+        }
+        .actions {
+            @extend .col-auto;
+            .material-icons {
+                color: $gray-500;
+            }
+        }
+    }
+}

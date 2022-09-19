@@ -1,0 +1,15 @@
+body {
+    background-color: $medium;
+    font-family: $font-family-base;
+    color: $indigo;
+}
+.page-content {
+    & > .content {
+        @extend .py-5;
+    }
+}
+
+[class*="sect-"] {
+    padding-top: map-get($spacers, 4 );
+    padding-bottom: map-get($spacers, 4 );
+}

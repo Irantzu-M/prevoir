@@ -1,0 +1,115 @@
+.header {
+    .top-header {
+        background: $light;
+        .content {
+            @extend .container-lg;
+            @extend .d-flex, .flex-wrap, .align-items-center, .justify-content-between, .py-3;
+        }
+        .navbar-brand {
+            img {
+                max-width: 180px;
+            }
+            @include media-breakpoint-down(xs) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .navbar-motto {
+            text-align: center;
+            @include media-breakpoint-between(xs,md) {
+                text-align: right !important;
+                padding: $spacer 0;
+            }
+            @include media-breakpoint-down(xs) {
+                width: 100%;
+                text-align: center !important;
+                padding: $spacer 0;
+            }
+            h1 {
+                @include responsive-font-size($h1-font-size);
+                font-family: $font-family-handwritting;
+                color: $secondary;
+            }
+        }
+        .navbar-actions {
+            .icon-link {
+                @extend .px-3;
+            }
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                @include display(flex);
+                @include wrap(wrap);
+                @include justify-content(flex-end);
+                a:first-child {
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+            }
+        }
+        .responsive-menu {
+            @extend .d-xl-none, .order-5, .ml-1;
+            .navbar-toggler {
+                @extend .btn-icon-secondary, .p-0;
+                border: none;
+                @include hover-focus-active {
+                    border: none;
+                    outline: none;
+                }
+                &:after {
+                    @extend .material-icons;
+                    display: inline;
+                }
+                &[aria-expanded="true"] {
+                    &:after {
+                        content: "close";
+                    }
+                }
+                &[aria-expanded="false"] {
+                    &:after {
+                        content: "menu";
+                    }
+                }
+            }
+        }
+    }
+    .navbar {
+        background-color: $primary;
+        @include box-shadow($default-box-shadow);
+        @include media-breakpoint-down(lg) {
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        .content {
+            @extend .container-lg;
+            @extend .d-lg-flex, .flex-wrap, .align-items-center, .justify-content-between;
+        }
+        .navbar-nav {
+            @extend .d-lg-flex, .flex-wrap;
+            width: 100%;
+            .nav-item {
+                @extend .flex-grow-1;
+            }
+            .nav-link{
+                text-align: center;
+                &:not(.active):not(.disabled) {
+                    color: $white;
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+                &.disabled {
+                    color: $light-orange;
+                    cursor: not-allowed;
+                    pointer-events: all;
+                }
+                &.active {
+                    position: relative;
+                    color: $secondary;
+                    @include media-breakpoint-up(lg) {
+                        @include position-mark;
+                    }
+                }
+            }
+        }
+    }
+}
